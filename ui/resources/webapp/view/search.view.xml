@@ -1,0 +1,33 @@
+<mvc:View 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:l="sap.ui.layout"
+	xmlns="sap.m" 
+	controllerName="ui.controller.search">
+			<Page title="{i18n&gt;title}" class="home">
+				<content>
+				<Panel headerText="{i18n&gt;CustomerName}" class="sapUiResponsiveMargin search" width="50%">
+                  <content>
+		                <SearchField
+							id="search"
+							width="100%"
+							placeholder="search for..."
+							enableSuggestions="true"
+							search="onSearch"
+							suggest="onSuggest"
+							suggestionItems="{
+								path: 'CustomerList>/Data',
+								sorter: { path: 'name' }
+							}"
+							>
+							<suggestionItems>
+								<SuggestionItem text="{CustomerList>name}" description="[Account Number: {path:'CustomerList>id'}]" key="{CustomerList>id}"/>
+							</suggestionItems>
+						</SearchField>
+                     <!--<Button text="{i18n&gt;Search}" press="onClickSearch" width="20%"/>-->
+                  </content>
+               </Panel>
+
+				</content>
+			</Page>
+</mvc:View>

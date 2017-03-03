@@ -1,0 +1,213 @@
+{
+  "Data": [
+    {
+      "id": "42",
+      "name": "Dent, Arthur Philip",
+      "ownCapital": 10000,
+      "rating": "0",
+      "age": "28",
+      "accounts": [
+        {
+          "id": "09991",
+          "account_name": "FilipeAccount01",
+          "date_opened": "2008-06-27T09:36:50.000Z",
+          "date_closed": "2008-07-27T09:36:50.000Z",
+          "last_balance": "80000"
+        },
+        {
+          "id": "894981",
+          "account_name": "FilipeAccount02",
+          "current_balance": "50000"
+        }
+      ],
+      "ratings": [
+        {
+          "rating_date": "2008-07-27T09:36:50.000Z",
+          "rating_value": "3",
+          "external_rating": "50",
+          "network_rating": "50"
+        },
+        {
+          "rating_value": "1",
+          "rating_date": "2008-08-27T09:36:50.000Z"
+        }
+      ],
+      "transactions": [
+        {
+          "id": "89949391",
+          "accountName": "Cash Loan CO.",
+          "accountType": "credit institution",
+          "timestamp": "2008-06-07T09:36:50.000Z",
+          "value": "69476.94"
+        },
+        {
+          "id": "000019883",
+          "accountName": "Zboncak-Predovic",
+          "timestamp": "2008-06-27T09:36:50.000Z",
+          "value": "2476.94"
+        },
+        {
+          "id": "784884",
+          "accountName": "Easy Loan North-West",
+          "accountType": "credit institution",
+          "timestamp": "2008-06-07T09:36:50.000Z",
+          "value": "69476.94",
+          "type": "Income"
+        },
+        {
+          "id": "9848848",
+          "timestamp": "2008-06-27T09:36:50.000Z",
+          "value": "2476.94",
+          "transactionType": "in"
+        },
+        {
+          "id": "02233",
+          "accountName": "Cash Loan CO.",
+          "timestamp": "2008-06-27T09:36:50.000Z",
+          "value": "2476.94",
+          "transactionType": "out"
+        },
+        {
+          "id": "07478382",
+          "accountName": "Zboncak-Predovic",
+          "accountType": "company",
+          "timestamp": "2008-06-27T09:36:50.000Z",
+          "value": "2476.94",
+          "transactionType": "out"
+        }
+      ]
+    },
+    {
+      "id": "11948",
+      "name": "Dawod, Marc",
+      "balnace": 5750,
+      "rating": "0",
+      "schufa": "0",
+      "loans": "5000.00",
+      "personal_data": [
+        {
+          "email": "someemail.com",
+          "address": "mannheimerStrasse.15 67067 Mannheim",
+          "birthdate": "05-05-1986",
+          "phone": "09498484899"
+        }
+      ],
+      "transactions": [
+        {
+          "id": "9845949",
+          "accountName": "Cash Loan CO.",
+          "accountType": "credit institution",
+          "timestamp": "2008-06-07T09:36:50.000Z",
+          "value": "69476.94",
+          "transactionType": "in"
+        },
+        {
+          "id": "20089484",
+          "accountId": "13",
+          "accountName": "Zboncak-Predovic",
+          "accountType": "company",
+          "timestamp": "2008-06-27T09:36:50.000Z",
+          "value": "2476.94",
+          "transactionType": "in"
+        },
+        {
+          "id": "347400003",
+          "accountName": "Easy Loan North-West",
+          "accountType": "credit institution",
+          "timestamp": "2008-06-07T09:36:50.000Z",
+          "value": "69476.94"
+        },
+        {
+          "id": "4984884",
+          "accountId": "4",
+          "accountName": "Robert Carter",
+          "timestamp": "2008-06-27T09:36:50.000Z",
+          "value": "2476.94",
+          "transactionType": "in"
+        }
+      ]
+    },
+    {
+      "id": "81201",
+      "type": "person",
+      "name": "Rai, Sascha",
+      "ownCapital": 12030,
+      "rating": "0",
+      "age": "30",
+      "schufa": "2",
+      "loans": "10000.00",
+      "personal_data": [
+        {
+          "address": "schillerStrasse.11 67059 LU",
+          "email": "someemail.com",
+          "phone": "01188949848",
+          "city": "Ludwigshafen"
+        }
+      ],
+      "ratings": [
+        {
+          "rating_date": "2008-08-27T09:36:50.000Z",
+          "rating_value": "1",
+          "external_rating": "30"
+        },
+        {
+          "rating_date": "2008-10-27T09:36:50.000Z",
+          "rating_value": "3"
+        }
+      ]
+    },
+    {
+      "id": "63031",
+      "type": "person",
+      "name": "Wagner, Sana",
+      "rating": "0",
+      "phone": "0838839993",
+      "schufa": "3",
+      "loans": "5000.00",
+      "ownCapital": 3203,
+      "transactions": [
+        {
+          "id": "1",
+          "accountId": "29",
+          "accountName": "Cash Loan CO.",
+          "timestamp": "2008-06-07T09:36:50.000Z",
+          "value": "69476.94",
+          "transactionType": "in"
+        },
+        {
+          "id": "2",
+          "accountId": "13",
+          "accountName": "Zboncak-Predovic",
+          "accountType": "company",
+          "timestamp": "2008-06-27T09:36:50.000Z",
+          "value": "2476.94",
+          "transactionType": "in"
+        }
+      ]
+    },
+    {
+      "id": "78168",
+      "type": "person",
+      "name": "Block, Holger",
+      "rating": "0",
+      "loans": "1000.00",
+      "ratings": [
+        {
+          "rating_date": "2008-07-27T09:36:50.000Z",
+          "rating_value": "4",
+          "external_rating": "30",
+          "network_rating": "50"
+        },
+        {
+          "rating_date": "2008-08-27T09:36:50.000Z",
+          "rating_value": "1",
+          "external_rating": "30"
+        },
+        {
+          "rating_date": "2008-10-27T09:36:50.000Z",
+          "rating_value": "4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+<mvc:View xmlns="sap.suite.ui.microchart" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:mvc="sap.ui.core.mvc" xmlns:vk="sap.ui.vk" xmlns:m="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified" controllerName="ui.controller.rating">
+	<m:Page showNavButton="true" navButtonPress="onNavBack">
+		<!--<SearchField width="50%" class="sapUiSmallMargin"/>-->
+		<l:VerticalLayout id="containerLayout" width="100%">
+			<l:BlockLayout id="BlockLayoutProfile">
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="{ClientData&gt;/name}">
+						<m:Text text="[{i18n&gt;accountnumber} {ClientData&gt;/id}]"/>
+					</l:BlockLayoutCell>
+					<l:BlockLayoutCell title="{i18n&gt;balance}:">
+						<u:Currency value="{ClientData&gt;/ownCapital}" currency="{i18n&gt;currency}" useSymbol="true"/>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+			</l:BlockLayout>
+		</l:VerticalLayout>
+		
+		<!-- Statistics -->
+		<m:GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n&gt;rating_schufa}">
+			<m:tileContent>
+				<m:TileContent unit="" footer="{i18n&gt;rating}">
+					<m:content>
+						<m:NumericContent value="{Rating&gt;/V_MESSAGE/externalRating}" icon="sap-icon://customer"/>
+					</m:content>
+				</m:TileContent>
+			</m:tileContent>
+		</m:GenericTile>
+		<m:GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Graph Rating">
+			<m:tileContent>
+				<m:TileContent unit="Rating" footer="">
+					<m:content>
+						<m:NumericContent value="{Rating&gt;/V_MESSAGE/networkRating}" icon="sap-icon://paid-leave"/>
+					</m:content>
+				</m:TileContent>
+			</m:tileContent>
+		</m:GenericTile>
+		<m:GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n&gt;age}">
+			<m:tileContent>
+				<m:TileContent unit="Years" footer="">
+					<m:content>
+						<m:NumericContent value="{ClientData&gt;/age}" icon="sap-icon://number-sign"/>
+					</m:content>
+				</m:TileContent>
+			</m:tileContent>
+		</m:GenericTile>
+		<m:GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n&gt;loans}">
+			<m:tileContent>
+				<m:TileContent unit="" footer="{ClientData&gt;/loanTileType}">
+					<m:content>
+						<m:NumericContent value="{ClientData&gt;/loanTileNumber}" icon="sap-icon://loan"/>
+					</m:content>
+				</m:TileContent>
+			</m:tileContent>
+		</m:GenericTile>
+		<m:GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n&gt;balance}">
+			<m:tileContent>
+				<m:TileContent unit="" footer="{ClientData&gt;/ownCapitalTileType}">
+					<m:content>
+						<m:NumericContent value="{ClientData&gt;/ownCapitalTileNumber}" icon="sap-icon://paid-leave"/>
+					</m:content>
+				</m:TileContent>
+			</m:tileContent>
+		</m:GenericTile>
+		<!--<mvc:XMLView viewName="ui.view.profile"/>-->
+		<m:Panel class="sapUiSmallMarginTop tab">
+			<html:div style="float:left;margin-right:100px; margin-bottom: 50px;width:20%;height:30%">
+					<l:VerticalLayout class="sapUiSmallMarginEnd">
+						<m:Title level="H2" class="h2" text="{i18n&gt;trustworthiness}"/>
+						<RadialMicroChart  id="rating" fraction="{Rating&gt;/V_RATING}" total="5" valueColor="{ path: 'Rating&gt;/V_RATING', formatter: '.setRatingLegendColor' }" />
+					</l:VerticalLayout>
+				</html:div>
+		    	<html:div style="float:left;width:30%;height:30%">
+		    		<l:VerticalLayout id="sapUiSmallMarginEnd" class="settings" width="700px">
+		    			<m:Title level="H2" class="h2" text="{i18n&gt;weights}"/>
+						<l:BlockLayout id="BlockLayout" width="100%">
+							<l:BlockLayoutRow accentCells="Accent1">
+								<l:BlockLayoutCell width="20%">
+									<m:Text text="{i18n&gt;rating_external}" class="sapUiSmallMarginTop"/>
+								</l:BlockLayoutCell>
+								<l:BlockLayoutCell width="65%">
+									<m:Slider app:rating="external" min="0" max="100" step="5" value="{Weight&gt;/external}" width="100%" liveChange="onChangeRating"/>
+								</l:BlockLayoutCell>
+								<l:BlockLayoutCell width="15%">
+									<m:Text text="{Weight&gt;/external}/100%" id="outputExternalRating" class="sapUiSmallMarginTop"/>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+							<l:BlockLayoutRow accentCells="Accent1">
+								<l:BlockLayoutCell width="20%">
+									<m:Text text="{i18n&gt;rating_network}" class="sapUiSmallMarginTop"/>
+								</l:BlockLayoutCell>
+								<l:BlockLayoutCell width="65%">
+									<m:Slider app:rating="network" min="0" max="100" step="5" value="{Weight&gt;/network}" width="100%" liveChange="onChangeRating"/>
+								</l:BlockLayoutCell>
+								<l:BlockLayoutCell width="15%">
+									<m:Text text="{Weight&gt;/network}/100%" id="outputNetworkRating" class="sapUiSmallMarginTop"/>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+						</l:BlockLayout>
+						<m:Button text="{i18n&gt;recalculate_trustworthiness}" press="onRecalculateTrustworthiness" icon="sap-icon://refresh" tooltip="recalculate_trustworthiness_tooltip"/>
+					</l:VerticalLayout>
+			</html:div>
+			<l:HorizontalLayout width="100%">
+				<html:div width="100%" class="legend">
+					<m:Title level="H3" class="h3" text="{i18n&gt;trustworthiness_categories}"/>
+					<vk:LegendItem title="{i18n&gt;categorie_5}" color="#0080FF"/> 
+					<vk:LegendItem title="{i18n&gt;categorie_4}" color="#61a656"/> 
+					<vk:LegendItem title="{i18n&gt;categorie_3}" color="#EE0"/>
+					<vk:LegendItem title="{i18n&gt;categorie_2}" color="#FF8000"/>
+					<vk:LegendItem title="{i18n&gt;categorie_1}" color="rgba(255,0,0,0.7)"/>
+					<html:br />
+				</html:div>
+		    </l:HorizontalLayout>
+		 </m:Panel>
+    </m:Page>
+</mvc:View>

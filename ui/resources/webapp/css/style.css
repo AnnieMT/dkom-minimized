@@ -1,0 +1,47 @@
+/* Enter your custom styles here */
+.search{
+	margin:0 auto!important;
+}
+
+.search .sapMPanelContent{
+	border:1px solid #ddd!important;
+	border-top:0!important;
+}
+
+.home{
+	max-height:50%;
+	margin-top:25%;
+}
+
+.home > .sapMPageHeader{
+	display:none;
+}
+
+.legend{
+	width:100%;
+}
+
+.legend ul,
+.legend li{
+	display:inline-block;
+	border-bottom:0;
+}
+
+.tab{
+	background-color:#fff;
+}
+
+.h3{
+	font-size:1.5em;
+	padding-bottom:20px;
+}
+
+.h2{
+	font-size:2em;
+}
+
+.h3,
+.h2{
+	display:block;
+	padding:10px;
+}

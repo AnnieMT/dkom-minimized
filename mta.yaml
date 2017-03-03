@@ -1,0 +1,13 @@
+_schema-version: '2.0'
+ID: dkom_minimized
+version: 0.0.1
+
+modules:
+ - name: ui
+   type: html5
+   path: ui
+
+ - name: backend
+   type: nodejs
+   path: backend
+
